@@ -1,3 +1,27 @@
-.background {
-	color: white;
+// Variables ===========
+
+$black-section-color: #171717;
+$yellow-section-color: #928A2A;
+$black-text: #2E2E2E;
+$white-text: #efefef;
+$btn-bg-color: #DDD026;
+
+// =====================
+
+// Container ===========
+.container {
+	margin: auto;
+	padding: 0px 16px;
 }
+// =====================
+
+// Button ==============
+.button {
+	font-size: 1rem;
+	box-shadow: $white-text 5px 5px;
+	background-color: $btn-bg-color;
+    padding: 8px 16px;
+	text-transform: uppercase;
+	color: $black-text;
+}
+// =====================

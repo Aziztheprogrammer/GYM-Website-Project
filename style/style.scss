@@ -1,1 +1,238 @@
 @import "ready-components";
+
+// Variables ===========
+
+$black-section-color: #171717;
+$yellow-section-color: #928A2A;
+$black-text: #2E2E2E;
+$white-text: #efefef;
+$btn-bg-color: #DDD026;
+
+// =====================
+
+// Main ================
+
+main {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+	z-index: 5;
+
+	&::before {
+		content: "";
+		background: url("../images/main.webp") no-repeat center center;
+		background-size: cover;
+		position: absolute;
+		top: 0px;
+		left: 0px;
+		width: 100%;
+		height: 100%;
+		filter: brightness(30%);
+		z-index: -1;
+	}
+
+	header {
+		background-color: rgba(23, 23, 23, 0.5);
+		color: $white-text;
+		font-family: "Big Shoulders Display", sans-serif;
+		font-size: 1.2rem;
+		font-weight: 400;
+		letter-spacing: 1px;
+		position: fixed;
+		top: 0px;
+		left: 0px;
+		width: 100%;
+		z-index: 3;
+
+		> .container {
+			@extend .container;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+
+			.logo {
+
+				> img {
+					height: 50px;
+					width: auto;
+
+					@media (max-width: 769px) {
+						height: 40px;
+					}
+				}
+			}
+
+			nav {
+				position: relative;
+
+				.burger__menu {
+					display: none;
+					width: 15px;
+					padding: 24px 0px;
+					flex-direction: column;
+					justify-content: center;
+					align-items: flex-end;
+					gap: 4px;
+					cursor: pointer;
+
+					@media (max-width: 769px) {
+						display: flex;
+					}
+
+					> span {
+						height: 1px;
+						background-color: #efefef;
+						transition: 0.7s ease-in-out width;
+
+						&:nth-child(1) {
+							width: 100%;
+						}
+
+						&:nth-child(2) {
+							width: 66.66%;
+						}
+
+						&:nth-child(3) {
+							width: 33.33%;
+						}
+					}
+				}
+
+				.burger__menu:hover > span {
+					width: 100%;
+				}
+
+				ul {
+					@media (max-width: 769px) {
+						display: none;
+					}
+
+					li {
+						display: inline-block;
+						padding: 24px 0px;
+						transition: 0.7s ease-in-out color;
+
+						&:not(:last-child) {
+							margin-right: 48px;
+
+							@media (max-width: 992px) {
+								margin-right: 24px;
+							}
+						}
+
+						&:hover {
+							color: #DDD026;
+						}
+					}
+				}
+
+				ul.opened {
+					background-color: $black-section-color;
+					padding: 16px 16px;
+					min-width: 200px;
+					display: block;
+					position: absolute;
+					right: 0px;
+					bottom: 0px;
+					transform: translateY(100%);
+					font-size: 14px;
+
+					> li {
+						margin: 0px !important;
+						display: block;
+						padding: 16px 0px;
+						position: relative;
+
+						&:first-child {
+							padding-top: 0px;
+						}
+
+						&:last-child {
+							padding-bottom: 0px;
+						}
+
+						&::after {
+							content: "";
+						    display: block;
+						    opacity: 0.5;
+						    height: 0.5px;
+						    width: calc(100% + 32px);
+						    position: absolute;
+						    left: 0px;
+						    bottom: 0px;
+						    background-color: #efefef;
+						    transform: translateX(-16px);
+						}
+
+						&:last-child::after {
+							display: none;
+						}
+					}
+				}
+			}
+
+			.contact__link {
+				@extend .button;
+
+				@media (max-width: 769px) {
+					display: none;
+				}
+			}
+		}
+	}
+
+	.hero__section {
+		text-align: center;
+
+		@media (max-width: 769px) {
+			font-size: 12px;
+		}
+
+		h1 {
+			color: #DDD026;
+			font-family: "Big Shoulders Display", sans-serif;
+			font-size: clamp(12px, 20vw, 2rem);
+			letter-spacing: 1px;
+		}
+
+		p {
+			max-width: 600px;
+			color: $white-text;
+			text-transform: capitalize;
+
+			&:nth-child(2) {
+				font-family: "Big Shoulders Display", sans-serif;
+				font-size: 3.2em;
+				font-weight: 600;
+			}
+
+			&:nth-child(3) {
+				font-family: "Poppins", sans-serif;
+				font-size: 1.2em;
+			}
+		}
+
+		i {
+			font-size: 1rem;
+			position: absolute;
+			bottom: 50px;
+			left: 50%;
+			transform: translateX(-50%);
+			color: $white-text;
+			animation: SwipeDownArrow 1s ease-in-out infinite alternate-reverse;
+		}
+	}
+}
+
+@keyframes SwipeDownArrow {
+	0% {
+		transform: translate(-50%, 0px);
+	}
+
+	100% {
+		transform: translate(-50%, -20px);
+	}
+}
+
+// =====================
