@@ -17,11 +17,22 @@ $btn-bg-color: #DDD026;
 
 // Button ==============
 .button {
+	font-family: "Big Shoulders Display", sans-serif;
 	font-size: 1rem;
+	letter-spacing: 1px;
+	text-transform: uppercase;
 	box-shadow: $white-text 5px 5px;
 	background-color: $btn-bg-color;
-    padding: 8px 16px;
-	text-transform: uppercase;
 	color: $black-text;
+	padding: 8px 16px;
+}
+// =====================
+
+// Section Title =======
+.section__title {
+	font-family: "Poppins", sans-serif;
+	text-transform: uppercase;
+	font-size: 2.3em;
+	letter-spacing: 10px;
 }
 // =====================

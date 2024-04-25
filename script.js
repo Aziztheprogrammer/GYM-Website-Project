@@ -9,3 +9,32 @@ burgerMenu.addEventListener("click", (e) => {
 })
 
 // =======================
+
+// Coachs Preview ========
+
+let coachs = document.querySelectorAll(".coach");
+console.log(coachs);
+ 
+coachs.forEach((coach) => {
+	coach.addEventListener("mouseover", (e) => {
+		coach.classList.add("active");
+		
+		coachs.forEach((coach) => {
+			if (!coach.classList.contains("active")) {
+				coach.classList.add("not-active");
+			}
+		})
+	})	
+})
+
+coachs.forEach((coach) => {
+	coach.addEventListener("mouseout", (e) => {
+		
+		coachs.forEach((coach) => {
+			coach.classList.remove("active");
+			coach.classList.remove("not-active");
+		})
+	})
+})
+
+// =======================
