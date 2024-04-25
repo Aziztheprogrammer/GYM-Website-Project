@@ -1,5 +1,9 @@
 @import "ready-components";
 
+body {
+	overflow-x: hidden;
+}
+
 // Variables ===========
 
 $black-section-color: #171717;
@@ -19,7 +23,6 @@ main {
 	justify-content: center;
 	align-items: center;
 	min-height: 100vh;
-	z-index: 5;
 
 	&::before {
 		content: "";
@@ -247,17 +250,23 @@ section.coachs__section {
 	> .container {
 		@extend .container;
 		display: flex;
-		gap: 32px;
+		justify-content: space-between;
 
 		@media (max-width: 769px) {
+			flex-direction: column;
 			flex-wrap: wrap;
-			gap: 0px;
-			justify-content: center;
+			gap: 32px;
 		}
 
 		.coachs__text {
 			padding: $section-padding 32px;
 			width: 300px;
+
+			@media (max-width: 769px) {
+				width: 100%;
+				text-align: center;
+				padding: $section-padding 0px 0px 0px;
+			}
 
 			h1 {
 				@extend .section__title;
@@ -281,19 +290,18 @@ section.coachs__section {
 			flex-grow: 1;
 			display: flex;
 			align-items: stretch;
+			flex-wrap: wrap;
 			
 
 			@media (max-width: 769px) {
+				padding-bottom: 64px;
 				width: 100%;
-				flex-direction: column;
+				gap: 8px;
 			}
 
 			.coach {
-				display: flex;
-				align-items: flex-end;
-				gap: 32px;
-				background-color: #DDD026;
 				overflow: hidden;
+				flex: 1 0 80px;
 
 				img {
 					height: 100%;
@@ -305,43 +313,6 @@ section.coachs__section {
 						width: 100%;
 						height: 100px;
 					}
-				}
-
-				.info {
-					font-family: "Poppins", sans-serif;
-					padding: 16px 0px;
-					display: none;
-
-					@media (max-width: 769px) {
-						padding: 16px;
-					}
-
-					small {
-						display: block;
-					}
-				}
-			}
-
-			.active {
-				width: 100%;
-
-				@media (max-width: 769px) {
-					height: fit-content;
-					gap: 0px;
-					flex-direction: column;
-					align-items: flex-start;
-				}
-
-				.info {
-					display: block;
-				}
-			}
-
-			.not-active {
-				width: 0px;
-
-				@media (max-width: 769px) {
-					width: 100%;
 				}
 			}
 		}
