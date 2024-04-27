@@ -26,7 +26,7 @@ main {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	min-height: 100dvh;
+	height: 100vh;
 
 	&::before {
 		content: "";
@@ -371,7 +371,7 @@ section.features__section {
 		@extend .container;
 		display: grid;
 		grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-		grid-gap: 48px;
+		grid-gap: 64px;
 		justify-items: center;
 
 		.feature {

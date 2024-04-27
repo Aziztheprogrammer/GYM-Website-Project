@@ -27,7 +27,7 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 100dvh; }
+  height: 100vh; }
   main::before {
     content: "";
     background: url("../images/main.webp") no-repeat center center;
@@ -251,7 +251,7 @@ section.features__section {
   section.features__section > .container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    grid-gap: 48px;
+    grid-gap: 64px;
     justify-items: center; }
     section.features__section > .container .feature {
       display: flex;
