@@ -268,4 +268,50 @@ section.features__section {
         section.features__section > .container .feature p > span {
           display: block; }
 
+section.notre-salle__section {
+  background-color: #928A2A; }
+  section.notre-salle__section .container {
+    margin: 0px;
+    padding: 0px;
+    max-width: 100%;
+    display: grid;
+    grid-template-columns: 40% 60%;
+    justify-items: center; }
+    @media (max-width: 769px) {
+      section.notre-salle__section .container {
+        grid-template-columns: 1fr; } }
+    section.notre-salle__section .container .image img {
+      filter: brightness(70%);
+      height: 100%;
+      width: auto;
+      object-fit: cover; }
+    section.notre-salle__section .container .section-content {
+      padding: 64px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      gap: 40px; }
+      section.notre-salle__section .container .section-content .row-1, section.notre-salle__section .container .section-content .row-2 {
+        display: flex;
+        gap: 40px; }
+        @media (max-width: 769px) {
+          section.notre-salle__section .container .section-content .row-1, section.notre-salle__section .container .section-content .row-2 {
+            flex-direction: column;
+            align-items: center;
+            text-align: center; } }
+        section.notre-salle__section .container .section-content .row-1 > div, section.notre-salle__section .container .section-content .row-2 > div {
+          width: 45%; }
+          @media (max-width: 769px) {
+            section.notre-salle__section .container .section-content .row-1 > div, section.notre-salle__section .container .section-content .row-2 > div {
+              width: 100%; } }
+          section.notre-salle__section .container .section-content .row-1 > div h1, section.notre-salle__section .container .section-content .row-2 > div h1 {
+            font-size: 22px;
+            font-weight: 600;
+            font-family: "Big Shoulders Display", sans-serif; }
+          section.notre-salle__section .container .section-content .row-1 > div p, section.notre-salle__section .container .section-content .row-2 > div p {
+            color: #2E2E2E;
+            font-size: 14px;
+            margin-top: 4px;
+            font-family: "Poppins", sans-serif; }
+
 /*# sourceMappingURL=style.css.map */
