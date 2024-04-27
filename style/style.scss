@@ -246,6 +246,47 @@ main {
 
 // =====================
 
+// Loading Screen ======
+
+div.loading__screen {
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	z-index: 10;
+	width: 100%;
+	height: 100%;
+	background-color: $black-section-color;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	animation: hide-screen 3s ease-in-out forwards; 
+
+	i {
+		color: $yellow-section-color;
+		font-size: 2rem;
+		animation: loading-icon ease 0.7s infinite;
+	}
+}
+
+@keyframes loading-icon {
+	0% {
+		transform: rotate(0deg);
+	} 100% {
+		transform: rotate(180deg);
+	}
+}
+
+@keyframes hide-screen {
+	50% {
+		opacity: 1;
+	} 100% {
+		opacity: 0;
+		display: none;
+	}
+}
+
+// =====================
+
 // Coachs ==============
 
 section.coachs__section {
@@ -409,6 +450,14 @@ section.features__section {
 			@media (max-width: 769px) {
 				flex-direction: column;
 				text-align: center;
+
+				&:nth-child(1) {
+					padding-top: 24px;
+				}
+
+				&:nth-child(3) {
+					padding-bottom: 24px;
+				}
 			}
 
 			i {
