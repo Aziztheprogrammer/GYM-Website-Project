@@ -17,6 +17,9 @@
   text-transform: uppercase;
   font-size: 2.3em; }
 
+html {
+  scroll-behavior: smooth; }
+
 body {
   overflow-x: hidden; }
 
@@ -248,7 +251,7 @@ section.features__section {
   section.features__section > .container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    grid-gap: 32px;
+    grid-gap: 48px;
     justify-items: center; }
     section.features__section > .container .feature {
       display: flex;

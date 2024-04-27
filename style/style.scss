@@ -1,5 +1,9 @@
 @import "ready-components";
 
+html {
+	scroll-behavior: smooth;
+}
+
 body {
 	overflow-x: hidden;
 }
@@ -367,7 +371,7 @@ section.features__section {
 		@extend .container;
 		display: grid;
 		grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-		grid-gap: 32px;
+		grid-gap: 48px;
 		justify-items: center;
 
 		.feature {
