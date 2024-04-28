@@ -1,4 +1,4 @@
-.container, main header > .container, section.features__section > .container {
+.container, main header > .container, section.features__section > .container, footer > .container {
   margin: auto;
   padding: 0px 16px; }
 
@@ -381,5 +381,43 @@ section.notre-salle__section {
             font-size: 14px;
             margin-top: 4px;
             font-family: "Poppins", sans-serif; }
+
+footer {
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  padding: 64px 0px;
+  background-color: #171717;
+  color: #efefef; }
+  footer > .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 32px; }
+    @media (max-width: 769px) {
+      footer > .container {
+        flex-direction: column;
+        align-items: stretch; } }
+    footer > .container .logo img {
+      width: 150px;
+      height: auto; }
+      @media (max-width: 769px) {
+        footer > .container .logo img {
+          margin: auto; } }
+    footer > .container .copyright {
+      text-align: center; }
+      footer > .container .copyright span {
+        display: block; }
+        footer > .container .copyright span a {
+          color: #DDD026; }
+    footer > .container .contact-info {
+      display: flex;
+      flex-direction: column;
+      gap: 8px; }
+      @media (max-width: 769px) {
+        footer > .container .contact-info {
+          text-align: center; } }
+      footer > .container .contact-info i {
+        color: #DDD026;
+        margin-right: 4px; }
 
 /*# sourceMappingURL=style.css.map */
