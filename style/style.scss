@@ -631,10 +631,14 @@ section.activ__section {
 	> .container {
 		@extend .container;
 		display: grid;
-		grid-template-columns: 40% 60%;
+		grid-template-columns: calc(40% - 48px) 60%;
 		justify-items: center;
 		align-items: center;
 		grid-gap: 48px;
+
+		@media (max-width: 769px) {
+			grid-template-columns: 1fr;
+		}
 
 		.section-text {
 			font-family: "Poppins", sans-serif;
@@ -642,18 +646,31 @@ section.activ__section {
 			h1 {
 				color: #DDD026;
 				@extend .section__title;
+
+				@media (max-width: 769px) {
+					text-align: center;
+				}
 			}
 
 			p {
 				font-weight: 200;
 				font-size: 14px;
 				margin: 16px 0px;
+
+				@media (max-width: 769px) {
+					text-align: center;
+				}
 			}
 
 			ul {
 				padding-left: 24px;
 				font-weight: 300;
 				font-size: 12px;
+
+				@media (max-width: 769px) {
+					margin: auto;
+					width: fit-content;
+				}
 
 				li {
 					position: relative;
@@ -674,6 +691,7 @@ section.activ__section {
 		}
 
 		.section-content {
+			width: 100%;
 			display: flex;
 			flex-direction: column;
 			align-items: stretch;
@@ -690,25 +708,33 @@ section.activ__section {
 				}
 
 				.text {
-					max-width: 55%;
+					max-width: 350px;
 
 					h2 {
 						font-family: "Big Shoulders Display", sans-serif;
 						font-size: 1.6rem;
 						letter-spacing: 1px;
 						color: #DDD026;
+
+						@media (max-width: 769px) {
+							font-size: 1.4rem;
+						}
 					}
 
 					p {
 						font-family: "Poppins", sans-serif;
 						font-size: 14px;
 						font-weight: 200;
+
+						@media (max-width: 769px) {
+							font-size: 12px;
+						}
 					}
 				}
 
 				img {
 					flex-grow: 1;
-					height: 100px;
+					height: 120px;
 					object-fit: cover;
 					border-radius: 8px;
 				}
