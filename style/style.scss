@@ -570,7 +570,7 @@ footer {
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
-		gap: 32px;
+		gap: 48px;
 
 		@media (max-width: 769px) {
 			flex-direction: column;
@@ -614,6 +614,104 @@ footer {
 			i {
 				color: #DDD026;
 				margin-right: 4px;
+			}
+		}
+	}
+}
+
+// =====================
+
+// Activités ===========
+
+section.activ__section {
+	color: $white-text;
+	background-color: $black-section-color;
+	padding: $section-padding 0px;
+
+	> .container {
+		@extend .container;
+		display: grid;
+		grid-template-columns: 40% 60%;
+		justify-items: center;
+		align-items: center;
+		grid-gap: 48px;
+
+		.section-text {
+			font-family: "Poppins", sans-serif;
+
+			h1 {
+				color: #DDD026;
+				@extend .section__title;
+			}
+
+			p {
+				font-weight: 200;
+				font-size: 14px;
+				margin: 16px 0px;
+			}
+
+			ul {
+				padding-left: 24px;
+				font-weight: 300;
+				font-size: 12px;
+
+				li {
+					position: relative;
+
+					&::after {
+						content: "";
+						background-color: #DDD026;
+						width: 10px;
+						height: 10px;
+						box-shadow: $white-text 3px 3px;
+						position: absolute;
+						top: 50%;
+						left: -24px;
+						transform: translateY(-50%);
+					}
+				}
+			}
+		}
+
+		.section-content {
+			display: flex;
+			flex-direction: column;
+			align-items: stretch;
+			gap: 24px;
+
+			> div {
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+				gap: 24px;
+
+				&:nth-child(2) {
+					flex-direction: row-reverse;
+				}
+
+				.text {
+					max-width: 55%;
+
+					h2 {
+						font-family: "Big Shoulders Display", sans-serif;
+						font-size: 1.6rem;
+						letter-spacing: 1px;
+						color: #DDD026;
+					}
+
+					p {
+						font-family: "Poppins", sans-serif;
+						font-size: 14px;
+						font-weight: 200;
+					}
+				}
+
+				img {
+					flex-grow: 1;
+					height: 100px;
+					object-fit: cover;
+					border-radius: 8px;
+				}
 			}
 		}
 	}

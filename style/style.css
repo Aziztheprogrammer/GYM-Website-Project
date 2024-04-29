@@ -1,4 +1,4 @@
-.container, main header > .container, section.features__section > .container, footer > .container {
+.container, main header > .container, section.features__section > .container, footer > .container, section.activ__section > .container {
   margin: auto;
   padding: 0px 16px; }
 
@@ -12,7 +12,7 @@
   color: #2E2E2E;
   padding: 8px 16px; }
 
-.section__title, section.coachs__section > .container .coachs__text h1 {
+.section__title, section.coachs__section > .container .coachs__text h1, section.activ__section > .container .section-text h1 {
   font-family: "Poppins", sans-serif;
   text-transform: uppercase;
   font-size: 2.3em; }
@@ -392,7 +392,7 @@ footer {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 32px; }
+    gap: 48px; }
     @media (max-width: 769px) {
       footer > .container {
         flex-direction: column;
@@ -419,5 +419,68 @@ footer {
       footer > .container .contact-info i {
         color: #DDD026;
         margin-right: 4px; }
+
+section.activ__section {
+  color: #efefef;
+  background-color: #171717;
+  padding: 64px 0px; }
+  section.activ__section > .container {
+    display: grid;
+    grid-template-columns: 40% 60%;
+    justify-items: center;
+    align-items: center;
+    grid-gap: 48px; }
+    section.activ__section > .container .section-text {
+      font-family: "Poppins", sans-serif; }
+      section.activ__section > .container .section-text h1 {
+        color: #DDD026; }
+      section.activ__section > .container .section-text p {
+        font-weight: 200;
+        font-size: 14px;
+        margin: 16px 0px; }
+      section.activ__section > .container .section-text ul {
+        padding-left: 24px;
+        font-weight: 300;
+        font-size: 12px; }
+        section.activ__section > .container .section-text ul li {
+          position: relative; }
+          section.activ__section > .container .section-text ul li::after {
+            content: "";
+            background-color: #DDD026;
+            width: 10px;
+            height: 10px;
+            box-shadow: #efefef 3px 3px;
+            position: absolute;
+            top: 50%;
+            left: -24px;
+            transform: translateY(-50%); }
+    section.activ__section > .container .section-content {
+      display: flex;
+      flex-direction: column;
+      align-items: stretch;
+      gap: 24px; }
+      section.activ__section > .container .section-content > div {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 24px; }
+        section.activ__section > .container .section-content > div:nth-child(2) {
+          flex-direction: row-reverse; }
+        section.activ__section > .container .section-content > div .text {
+          max-width: 55%; }
+          section.activ__section > .container .section-content > div .text h2 {
+            font-family: "Big Shoulders Display", sans-serif;
+            font-size: 1.6rem;
+            letter-spacing: 1px;
+            color: #DDD026; }
+          section.activ__section > .container .section-content > div .text p {
+            font-family: "Poppins", sans-serif;
+            font-size: 14px;
+            font-weight: 200; }
+        section.activ__section > .container .section-content > div img {
+          flex-grow: 1;
+          height: 100px;
+          object-fit: cover;
+          border-radius: 8px; }
 
 /*# sourceMappingURL=style.css.map */
