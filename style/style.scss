@@ -489,7 +489,7 @@ section.notre-salle__section {
 		display: grid;
 		grid-template-columns: 40% 60%;
 		justify-items: center;
-		align-items: stretch;
+		align-items: center;
 
 		@media (max-width: 769px) {
 			grid-template-columns: 1fr;
@@ -498,6 +498,7 @@ section.notre-salle__section {
 		.image {
 			width: 100%;
 			max-height: 500px;
+			overflow: hidden;
 
 			@media (max-width: 769px) {
 				max-height: 300px;
@@ -634,7 +635,7 @@ section.activ__section {
 		grid-template-columns: calc(40% - 48px) 60%;
 		justify-items: center;
 		align-items: center;
-		grid-gap: 48px;
+		grid-gap: 64px;
 
 		@media (max-width: 769px) {
 			grid-template-columns: 1fr;
@@ -656,6 +657,7 @@ section.activ__section {
 				font-weight: 200;
 				font-size: 14px;
 				margin: 16px 0px;
+				max-width: 400px;
 
 				@media (max-width: 769px) {
 					text-align: center;
@@ -708,7 +710,7 @@ section.activ__section {
 				}
 
 				.text {
-					max-width: 350px;
+					max-width: 320px;
 
 					h2 {
 						font-family: "Big Shoulders Display", sans-serif;
@@ -737,6 +739,10 @@ section.activ__section {
 					height: 120px;
 					object-fit: cover;
 					border-radius: 8px;
+				}
+
+				img[src="images/act-1.webp"] {
+					object-position: top;
 				}
 			}
 		}
