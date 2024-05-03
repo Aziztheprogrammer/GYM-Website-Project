@@ -734,6 +734,143 @@ section.gallery__section {
 
 // =====================
 
+// Contact =============
+
+section.contact__info__section {
+	position: relative;
+	z-index: 2;
+
+	&::after {
+		content: "";
+		position: absolute;
+		top: 0px;
+		left: 0px;
+		z-index: -1;
+		background: url("../images/main.webp") no-repeat center center;
+		background-size: cover;
+		width: 100%;
+		height: 100%;
+		filter: brightness(20%);
+	}
+
+	> .container {
+		@extend .container;
+
+		.contact-info {
+			color: $white-text;
+			width: 100%;
+			padding: $section-padding 16px;
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			gap: 64px;
+
+			@media (max-width: 769px) {
+				flex-wrap: wrap;
+			}
+
+			> div {
+				display: flex;
+				align-items: center;
+				gap: 8px;
+
+				@media (max-width: 769px) {
+					width: 100%;
+					flex-direction: column;
+					justify-content: center;
+				}
+
+				p {
+					display: inline-block;
+					color: #928A2A;
+					font-family: "Poppins", sans-serif;
+					font-size: 14px; 
+
+					@media (max-width: 769px) {
+						display: block;
+						text-align: center;
+					}
+
+					span {
+						display: block;
+						color: $white-text;
+					}
+				}
+
+				i {
+					font-size: 18px;
+					background-color: #928A2A;
+					padding: 8px;
+				}
+			}
+		}
+	}
+}
+
+section.contact-us__section {
+	background-color: $yellow-section-color;
+	display: grid;
+	grid-template-columns: 50% 50%;
+
+	@media (max-width: 769px) {
+		grid-template-columns: 1fr;
+	}
+
+	.form {
+		padding: $section-padding;
+
+		@media (max-width: 769px) {
+			padding: $section-padding ($section-padding / 2);
+		}
+
+		form {
+			padding-top: 24px;
+			display: flex;
+			flex-wrap: wrap;
+			gap: 16px;
+
+			> input {
+				position: relative;
+				flex: 1 0 200px;
+				padding: 8px 16px;
+
+				&#input-message {
+					height: 200px;	
+				}
+
+				&::placeholder {
+					font-size: 14px;
+					position: absolute;
+					top: 8px;
+					left: 16px;
+				}
+			}
+
+			> button {
+				@extend .button;
+			}
+		}
+
+		h1 {
+			@extend .section__title;
+		}
+	}
+
+	.contact-us-image {
+		width: 100%;
+		overflow: hidden;
+
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			filter: brightness(70%);
+		}
+	}
+}
+
+// =====================
+
 // Footer ==============
 
 footer {

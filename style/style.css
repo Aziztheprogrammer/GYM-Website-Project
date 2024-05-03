@@ -1,8 +1,8 @@
-.container, main header > .container, section.features__section > .container, section.activ__section > .container, section.gallery__section > .container, footer > .container {
+.container, main header > .container, section.features__section > .container, section.activ__section > .container, section.gallery__section > .container, section.contact__info__section > .container, footer > .container {
   margin: auto;
   padding: 0px 16px; }
 
-.button, main header > .container .contact__link, section.coachs__section > .container .coachs__text a, section.gallery__section > .container a {
+.button, main header > .container .contact__link, section.coachs__section > .container .coachs__text a, section.gallery__section > .container a, section.contact-us__section .form form > button {
   font-family: "Big Shoulders Display", sans-serif;
   font-size: 1rem;
   letter-spacing: 1px;
@@ -12,7 +12,7 @@
   color: #2E2E2E;
   padding: 8px 16px; }
 
-.section__title, section.coachs__section > .container .coachs__text h1, section.activ__section > .container .section-text h1 {
+.section__title, section.coachs__section > .container .coachs__text h1, section.activ__section > .container .section-text h1, section.contact-us__section .form h1 {
   font-family: "Poppins", sans-serif;
   text-transform: uppercase;
   font-size: 2.3em; }
@@ -494,6 +494,94 @@ section.gallery__section {
         transition: 0.7s ease-in-out transform; }
         section.gallery__section > .container .images-container > div img:hover {
           transform: scale(1.1); }
+
+section.contact__info__section {
+  position: relative;
+  z-index: 2; }
+  section.contact__info__section::after {
+    content: "";
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: -1;
+    background: url("../images/main.webp") no-repeat center center;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    filter: brightness(20%); }
+  section.contact__info__section > .container .contact-info {
+    color: #efefef;
+    width: 100%;
+    padding: 64px 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 64px; }
+    @media (max-width: 769px) {
+      section.contact__info__section > .container .contact-info {
+        flex-wrap: wrap; } }
+    section.contact__info__section > .container .contact-info > div {
+      display: flex;
+      align-items: center;
+      gap: 8px; }
+      @media (max-width: 769px) {
+        section.contact__info__section > .container .contact-info > div {
+          width: 100%;
+          flex-direction: column;
+          justify-content: center; } }
+      section.contact__info__section > .container .contact-info > div p {
+        display: inline-block;
+        color: #928A2A;
+        font-family: "Poppins", sans-serif;
+        font-size: 14px; }
+        @media (max-width: 769px) {
+          section.contact__info__section > .container .contact-info > div p {
+            display: block;
+            text-align: center; } }
+        section.contact__info__section > .container .contact-info > div p span {
+          display: block;
+          color: #efefef; }
+      section.contact__info__section > .container .contact-info > div i {
+        font-size: 18px;
+        background-color: #928A2A;
+        padding: 8px; }
+
+section.contact-us__section {
+  background-color: #928A2A;
+  display: grid;
+  grid-template-columns: 50% 50%; }
+  @media (max-width: 769px) {
+    section.contact-us__section {
+      grid-template-columns: 1fr; } }
+  section.contact-us__section .form {
+    padding: 64px; }
+    @media (max-width: 769px) {
+      section.contact-us__section .form {
+        padding: 64px 32px; } }
+    section.contact-us__section .form form {
+      padding-top: 24px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px; }
+      section.contact-us__section .form form > input {
+        position: relative;
+        flex: 1 0 200px;
+        padding: 8px 16px; }
+        section.contact-us__section .form form > input#input-message {
+          height: 200px; }
+        section.contact-us__section .form form > input::placeholder {
+          font-size: 14px;
+          position: absolute;
+          top: 8px;
+          left: 16px; }
+  section.contact-us__section .contact-us-image {
+    width: 100%;
+    overflow: hidden; }
+    section.contact-us__section .contact-us-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      filter: brightness(70%); }
 
 footer {
   font-family: "Poppins", sans-serif;
