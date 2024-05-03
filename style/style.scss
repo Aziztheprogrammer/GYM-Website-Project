@@ -557,71 +557,6 @@ section.notre-salle__section {
 
 // =====================
 
-// Footer ==============
-
-footer {
-	font-family: "Poppins", sans-serif;
-	font-size: 14px;
-	padding: $section-padding 0px;
-	background-color: $black-section-color;
-	color: $white-text;
-
-	> .container {
-		@extend .container;
-		display: flex;
-		align-items: center;
-		justify-content: space-between;
-		gap: 48px;
-
-		@media (max-width: 769px) {
-			flex-direction: column;
-			align-items: stretch;
-		}
-
-		.logo {
-
-			img {
-				width: 150px;
-				height: auto;
-
-				@media (max-width: 769px) {
-					margin: auto;
-				}
-
-			}
-		}
-
-		.copyright {
-			text-align: center;
-
-			span {
-				display: block;
-
-				a {
-					color: #DDD026;
-				}
-			}
-		}
-
-		.contact-info {
-			display: flex;
-			flex-direction: column;
-			gap: 8px;
-
-			@media (max-width: 769px) {
-				text-align: center;
-			}
-
-			i {
-				color: #DDD026;
-				margin-right: 4px;
-			}
-		}
-	}
-}
-
-// =====================
-
 // Activités ===========
 
 section.activ__section {
@@ -744,6 +679,119 @@ section.activ__section {
 				img[src="images/act-1.webp"] {
 					object-position: top;
 				}
+			}
+		}
+	}
+}
+
+// =====================
+
+// Gallery =============
+
+section.gallery__section {
+	color: $white-text;
+	background-color: $black-section-color;
+	padding: $section-padding 0px;
+
+	> .container {
+		@extend .container;
+
+		.images-container {
+			padding-bottom: 24px;
+			display: flex;
+			flex-wrap: wrap;
+			gap: 16px;
+
+			> div {
+				flex: 1 0 400px;
+				max-height: 200px;
+				overflow: hidden;
+				border-radius: 8px;
+
+				@media (max-width: 769px) {
+					flex: 1 0 300px;
+				}
+
+				img {
+					width: 100%;
+					height: 100%;
+					object-fit: cover;
+					filter: brightness(70%);
+					transition: 0.7s ease-in-out transform;
+
+					&:hover {
+						transform: scale(1.1);
+					}
+				}
+			}
+		}
+
+		a {
+			@extend .button;
+		}
+	}
+}
+
+// =====================
+
+// Footer ==============
+
+footer {
+	font-family: "Poppins", sans-serif;
+	font-size: 14px;
+	padding: $section-padding 0px;
+	background-color: $black-section-color;
+	color: $white-text;
+
+	> .container {
+		@extend .container;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: 48px;
+
+		@media (max-width: 769px) {
+			flex-direction: column;
+			align-items: stretch;
+		}
+
+		.logo {
+
+			img {
+				width: 150px;
+				height: auto;
+
+				@media (max-width: 769px) {
+					margin: auto;
+				}
+
+			}
+		}
+
+		.copyright {
+			text-align: center;
+
+			span {
+				display: block;
+
+				a {
+					color: #DDD026;
+				}
+			}
+		}
+
+		.contact-info {
+			display: flex;
+			flex-direction: column;
+			gap: 8px;
+
+			@media (max-width: 769px) {
+				text-align: center;
+			}
+
+			i {
+				color: #DDD026;
+				margin-right: 4px;
 			}
 		}
 	}

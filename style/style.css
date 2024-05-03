@@ -1,8 +1,8 @@
-.container, main header > .container, section.features__section > .container, footer > .container, section.activ__section > .container {
+.container, main header > .container, section.features__section > .container, section.activ__section > .container, section.gallery__section > .container, footer > .container {
   margin: auto;
   padding: 0px 16px; }
 
-.button, main header > .container .contact__link, section.coachs__section > .container .coachs__text a {
+.button, main header > .container .contact__link, section.coachs__section > .container .coachs__text a, section.gallery__section > .container a {
   font-family: "Big Shoulders Display", sans-serif;
   font-size: 1rem;
   letter-spacing: 1px;
@@ -383,44 +383,6 @@ section.notre-salle__section {
             margin-top: 4px;
             font-family: "Poppins", sans-serif; }
 
-footer {
-  font-family: "Poppins", sans-serif;
-  font-size: 14px;
-  padding: 64px 0px;
-  background-color: #171717;
-  color: #efefef; }
-  footer > .container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 48px; }
-    @media (max-width: 769px) {
-      footer > .container {
-        flex-direction: column;
-        align-items: stretch; } }
-    footer > .container .logo img {
-      width: 150px;
-      height: auto; }
-      @media (max-width: 769px) {
-        footer > .container .logo img {
-          margin: auto; } }
-    footer > .container .copyright {
-      text-align: center; }
-      footer > .container .copyright span {
-        display: block; }
-        footer > .container .copyright span a {
-          color: #DDD026; }
-    footer > .container .contact-info {
-      display: flex;
-      flex-direction: column;
-      gap: 8px; }
-      @media (max-width: 769px) {
-        footer > .container .contact-info {
-          text-align: center; } }
-      footer > .container .contact-info i {
-        color: #DDD026;
-        margin-right: 4px; }
-
 section.activ__section {
   color: #efefef;
   background-color: #171717;
@@ -506,5 +468,69 @@ section.activ__section {
           border-radius: 8px; }
         section.activ__section > .container .section-content > div img[src="images/act-1.webp"] {
           object-position: top; }
+
+section.gallery__section {
+  color: #efefef;
+  background-color: #171717;
+  padding: 64px 0px; }
+  section.gallery__section > .container .images-container {
+    padding-bottom: 24px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px; }
+    section.gallery__section > .container .images-container > div {
+      flex: 1 0 400px;
+      max-height: 200px;
+      overflow: hidden;
+      border-radius: 8px; }
+      @media (max-width: 769px) {
+        section.gallery__section > .container .images-container > div {
+          flex: 1 0 300px; } }
+      section.gallery__section > .container .images-container > div img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        filter: brightness(70%);
+        transition: 0.7s ease-in-out transform; }
+        section.gallery__section > .container .images-container > div img:hover {
+          transform: scale(1.1); }
+
+footer {
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  padding: 64px 0px;
+  background-color: #171717;
+  color: #efefef; }
+  footer > .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 48px; }
+    @media (max-width: 769px) {
+      footer > .container {
+        flex-direction: column;
+        align-items: stretch; } }
+    footer > .container .logo img {
+      width: 150px;
+      height: auto; }
+      @media (max-width: 769px) {
+        footer > .container .logo img {
+          margin: auto; } }
+    footer > .container .copyright {
+      text-align: center; }
+      footer > .container .copyright span {
+        display: block; }
+        footer > .container .copyright span a {
+          color: #DDD026; }
+    footer > .container .contact-info {
+      display: flex;
+      flex-direction: column;
+      gap: 8px; }
+      @media (max-width: 769px) {
+        footer > .container .contact-info {
+          text-align: center; } }
+      footer > .container .contact-info i {
+        color: #DDD026;
+        margin-right: 4px; }
 
 /*# sourceMappingURL=style.css.map */
