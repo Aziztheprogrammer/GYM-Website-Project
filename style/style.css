@@ -576,7 +576,8 @@ section.contact-us__section {
           left: 16px; }
   section.contact-us__section .contact-us-image {
     width: 100%;
-    overflow: hidden; }
+    overflow: hidden;
+    max-height: 500px; }
     section.contact-us__section .contact-us-image img {
       width: 100%;
       height: 100%;
