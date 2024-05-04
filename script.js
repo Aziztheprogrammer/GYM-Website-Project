@@ -10,9 +10,11 @@ burgerMenu.addEventListener("click", (e) => {
 
 // =======================
 
+// Screen Loading ========
 
-// Screen Loading
 let loadingScreen = document.querySelector(".loading__screen");
 document.body.onload = () => {
 	loadingScreen.style.display = "none";
 }
+
+// =======================
