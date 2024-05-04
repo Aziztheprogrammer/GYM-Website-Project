@@ -19,6 +19,17 @@
 	<script src="https://cdn.tailwindcss.com"></script>
 	<!-- Font Awesome -->
 	<script src="https://kit.fontawesome.com/43b978cfd6.js" crossorigin="anonymous"></script>
+	<!-- EmailJS -->
+	<script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+	</script>
+	<script type="text/javascript">
+	   (function(){
+	      emailjs.init({
+	        publicKey: "cQMiEqbs9I3MFn79h",
+	      });
+	   })();
+	</script>
 	<!-- Normalize Css File Included In Tailwind -->
 	<!-- Developed By Mohamed Aziz Berhouma -->
 </head>
@@ -306,7 +317,7 @@
 				<input type="text" name="nom" id="input-nom" placeholder="Votre Sujet ..." required>
 				<input type="text" name="sujet" id="input-sujet" placeholder="Votre Nom ..." required>
 				<input id="input-message" name="message" placeholder="Ecrivez Votre Message ..." required>
-				<button>
+				<button type="submit" onclick="sendMail()">
 					Envoyer
 				</button>
 			</form>

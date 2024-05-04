@@ -14,12 +14,12 @@ burgerMenu.addEventListener("click", (e) => {
 
 function sendMail() {
 	let params = {
-		sujet: document.getElementById("input-sujet"),
-		nom: document.getElementById("input-nom"),
-		message: document.getElementById("input-message")
+		sujet: document.getElementById("input-sujet").value,
+		nom: document.getElementById("input-nom").value,
+		message: document.getElementById("input-message").value
 	}
 
-	emailjs.send("service_um9f5jk","template_gwqnb59", params).then(() => {
+	emailjs.send("service_um9f5jk","template_gwqnb59", params).then((res) => {
 		alert("Message Envoyé !")
 	}).catch("Erreur !")
 }
