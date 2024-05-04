@@ -14,15 +14,27 @@ burgerMenu.addEventListener("click", (e) => {
 
 function sendMail() {
 	let params = {
-		sujet: document.getElementById("input-sujet").value,
-		nom: document.getElementById("input-nom").value,
-		message: document.getElementById("input-message").value
+		sujet: sujetValue,
+		nom: nomValue,
+		message: messageValue
 	}
 
-	emailjs.send("service_um9f5jk","template_gwqnb59", params).then((res) => {
-		alert("Message Envoyé !")
-	}).catch("Erreur !")
+	emailjs.send("service_um9f5jk","template_gwqnb59", params);
 }
+
+document.querySelector("form").addEventListener("submit", () => {
+
+	let sujetValue = document.getElementById("input-sujet").value;
+	let nomValue = document.getElementById("input-nom").value; 
+	let messageValue = document.getElementById("input-message").value; 
+
+	if (sujetValue.trim() != "" && nomValue.trim() != "" && messageValue.trim() != "") {
+		alert("Message Envoyé !")
+		sendMail()
+	} else {
+		alert("Erreur !")
+	}
+})
 
 // =======================
 
