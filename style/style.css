@@ -198,6 +198,12 @@ div.loading__screen {
     transform: rotate(0deg); }
   100% {
     transform: rotate(180deg); } }
+@keyframes hide-screen {
+  50% {
+    opacity: 1; }
+  100% {
+    opacity: 0;
+    display: none; } }
 section.coachs__section {
   background-color: #928A2A; }
   section.coachs__section > .container {

@@ -9,3 +9,19 @@ burgerMenu.addEventListener("click", (e) => {
 })
 
 // =======================
+
+// Burger Menu ===========
+
+function sendMail() {
+	let params = {
+		sujet: document.getElementById("input-sujet"),
+		nom: document.getElementById("input-nom"),
+		message: document.getElementById("input-message")
+	}
+
+	emailjs.send("service_um9f5jk","template_gwqnb59", params).then(() => {
+		alert("Message Envoyé !")
+	}).catch("Erreur !")
+}
+
+// =======================
