@@ -10,7 +10,7 @@ burgerMenu.addEventListener("click", (e) => {
 
 // =======================
 
-// Burger Menu ===========
+// Contact Form ==========
 
 function sendMail() {
 	let params = {
@@ -23,5 +23,19 @@ function sendMail() {
 		alert("Message Envoyé !")
 	}).catch("Erreur !")
 }
+
+// =======================
+
+// Loading Screen ========
+
+let loadingScreen = document.getElementById("loading");
+
+document.onreadystatechange = function() {
+    if (document.readyState !== "complete") {
+        loadingScreen.style.display = "block";
+    } else {
+        loadingScreen.style.display = "none";
+    }
+};
 
 // =======================
