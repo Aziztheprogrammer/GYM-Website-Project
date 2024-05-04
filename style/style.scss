@@ -376,6 +376,12 @@ section.coachs__section {
 						color: $white-text;
 						animation: coachName 0.7s ease forwards alternate;
 					}
+
+					@media (max-width: 769px) {
+						a {
+							display: none;
+						}
+					}
 				}
 
 				img {
@@ -644,6 +650,10 @@ section.activ__section {
 					flex-direction: row-reverse;
 				}
 
+				@media (max-width: 769px) {
+					flex-direction: row-reverse;
+				}
+
 				.text {
 					max-width: 320px;
 
@@ -656,6 +666,9 @@ section.activ__section {
 						@media (max-width: 769px) {
 							font-size: 1.4rem;
 						}
+						@media (max-width: 480px) {
+							font-size: 1.2rem;
+						}
 					}
 
 					p {
@@ -666,6 +679,10 @@ section.activ__section {
 						@media (max-width: 769px) {
 							font-size: 12px;
 						}
+
+						@media (max-width: 480px) {
+							font-size: 10px;
+						}
 					}
 				}
 
@@ -673,7 +690,11 @@ section.activ__section {
 					flex-grow: 1;
 					height: 120px;
 					object-fit: cover;
-					border-radius: 8px;
+
+					@media (max-width: 769px) {
+						min-width: 120px;
+						width: 30%;
+					}
 				}
 
 				img[src="images/act-1.webp"] {
@@ -706,7 +727,6 @@ section.gallery__section {
 				flex: 1 0 400px;
 				max-height: 200px;
 				overflow: hidden;
-				border-radius: 8px;
 
 				@media (max-width: 769px) {
 					flex: 1 0 300px;

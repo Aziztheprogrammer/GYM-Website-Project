@@ -25,6 +25,12 @@ $btn-bg-color: #DDD026;
 	background-color: $btn-bg-color;
 	color: $black-text;
 	padding: 8px 16px;
+
+	@media (max-width: 769px) {
+		display: inline-block;
+		text-align: center;
+		width: 100%;
+	}
 }
 // =====================
 

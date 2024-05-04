@@ -11,6 +11,11 @@
   background-color: #DDD026;
   color: #2E2E2E;
   padding: 8px 16px; }
+  @media (max-width: 769px) {
+    .button, main header > .container .contact__link, section.coachs__section > .container .coachs__text a, section.gallery__section > .container a, section.contact-us__section .form form > button {
+      display: inline-block;
+      text-align: center;
+      width: 100%; } }
 
 .section__title, section.coachs__section > .container .coachs__text h1, section.activ__section > .container .section-text h1, section.contact-us__section .form h1 {
   font-family: "Poppins", sans-serif;
@@ -262,6 +267,9 @@ section.coachs__section {
           text-transform: uppercase;
           color: #efefef;
           animation: coachName 0.7s ease forwards alternate; }
+        @media (max-width: 769px) {
+          section.coachs__section > .container .coachs__images .coach:hover a {
+            display: none; } }
         section.coachs__section > .container .coachs__images .coach img {
           height: 100%;
           width: 100%;
@@ -444,6 +452,9 @@ section.activ__section {
         gap: 24px; }
         section.activ__section > .container .section-content > div:nth-child(2) {
           flex-direction: row-reverse; }
+        @media (max-width: 769px) {
+          section.activ__section > .container .section-content > div {
+            flex-direction: row-reverse; } }
         section.activ__section > .container .section-content > div .text {
           max-width: 320px; }
           section.activ__section > .container .section-content > div .text h2 {
@@ -454,6 +465,9 @@ section.activ__section {
             @media (max-width: 769px) {
               section.activ__section > .container .section-content > div .text h2 {
                 font-size: 1.4rem; } }
+            @media (max-width: 480px) {
+              section.activ__section > .container .section-content > div .text h2 {
+                font-size: 1.2rem; } }
           section.activ__section > .container .section-content > div .text p {
             font-family: "Poppins", sans-serif;
             font-size: 14px;
@@ -461,11 +475,17 @@ section.activ__section {
             @media (max-width: 769px) {
               section.activ__section > .container .section-content > div .text p {
                 font-size: 12px; } }
+            @media (max-width: 480px) {
+              section.activ__section > .container .section-content > div .text p {
+                font-size: 10px; } }
         section.activ__section > .container .section-content > div img {
           flex-grow: 1;
           height: 120px;
-          object-fit: cover;
-          border-radius: 8px; }
+          object-fit: cover; }
+          @media (max-width: 769px) {
+            section.activ__section > .container .section-content > div img {
+              min-width: 120px;
+              width: 30%; } }
         section.activ__section > .container .section-content > div img[src="images/act-1.webp"] {
           object-position: top; }
 
@@ -481,8 +501,7 @@ section.gallery__section {
     section.gallery__section > .container .images-container > div {
       flex: 1 0 400px;
       max-height: 200px;
-      overflow: hidden;
-      border-radius: 8px; }
+      overflow: hidden; }
       @media (max-width: 769px) {
         section.gallery__section > .container .images-container > div {
           flex: 1 0 300px; } }
