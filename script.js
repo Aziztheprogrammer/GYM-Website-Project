@@ -32,7 +32,7 @@ let loadingScreen = document.getElementById("loading");
 
 document.onreadystatechange = function() {
     if (document.readyState !== "complete") {
-        loadingScreen.style.display = "block";
+        loadingScreen.style.display = "flex";
     } else {
         loadingScreen.style.display = "none";
     }
