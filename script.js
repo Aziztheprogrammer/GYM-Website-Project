@@ -19,7 +19,11 @@ function sendMail() {
 		message: messageValue
 	}
 
-	emailjs.send("service_um9f5jk","template_gwqnb59", params);
+	emailjs.send("service_um9f5jk","template_gwqnb59", params).then(() => {
+		console.log("Successfuly Sent !")
+	}).catch(() => {
+		console.log("Failed !")
+	});
 }
 
 document.querySelector("form").addEventListener("submit", () => {
