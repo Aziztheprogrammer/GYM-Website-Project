@@ -37,19 +37,3 @@ document.querySelector("form").addEventListener("submit", () => {
 })
 
 // =======================
-
-// Loading Screen ========
-
-let loadingScreen = document.getElementById("loading");
-
-document.onreadystatechange = function() {
-    if (document.readyState !== "complete") {
-        loadingScreen.style.display = "flex";
-        document.body.style.visibility = "hidden";
-    } else {
-        loadingScreen.style.display = "none";
-        document.body.style.visibility = "visible";
-    }
-};
-
-// =======================

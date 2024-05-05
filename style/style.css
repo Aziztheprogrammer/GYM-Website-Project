@@ -186,7 +186,8 @@ div.loading__screen {
   background-color: #171717;
   display: flex;
   align-items: center;
-  justify-content: center; }
+  justify-content: center;
+  animation: hide-screen 3s ease-in-out forwards; }
   div.loading__screen i {
     color: #928A2A;
     font-size: 2rem;
@@ -197,6 +198,12 @@ div.loading__screen {
     transform: rotate(0deg); }
   100% {
     transform: rotate(180deg); } }
+@keyframes hide-screen {
+  50% {
+    opacity: 1; }
+  100% {
+    opacity: 0;
+    display: none; } }
 section.coachs__section {
   background-color: #928A2A; }
   section.coachs__section > .container {
